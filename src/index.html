@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Stone Creamery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../dist/styles.css">
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white">
+        <div class="flex items-center">
+            <img src="../images/cold/SideMedalLogo_2Color_ goldring.jpg" alt="Cold Stone Creamery Logo" class="h-8 mr-2">
+        </div>
+        <!-- Hamburger button visible on smaller screens -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Desktop navigation -->
+        <nav class="hidden md:flex space-x-4">
+            <a href="index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="a_propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Mobile navigation -->
+        <div id="mobile-menu" class="transform translate-x-full fixed inset-0 bg-white flex flex-col items-center justify-center z-50 transition-transform duration-300 md:hidden">
+            <button id="close-btn" class="absolute top-4 right-4 focus:outline-none">
+                <!-- Close Icon (Cross) -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 text-center">
+                <a href="index.html" class="text-xl">Accueil</a>
+                <a href="menu.html" class="text-xl">Menu</a>
+                <a href="a_propos.html" class="text-xl">À propos</a>
+                <a href="contact.html" class="text-xl">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="bg-yellow text-white text-center py-16">
+        <div class="relative">
+            <img src="../images/84770f_bdcc40e3b5ce45f4b672692e83f4917b~mv1.webp" alt="Glacier Image" class="mx-auto">
+            <div class="absolute inset-0 flex flex-col justify-center items-center">
+                <h1 class="text-xl md:text-2xl">Glacier</h1>
+                <h2 class="text-2xl md:text-4xl font-bold mt-2">Cold Stone Creamery</h2>
+                <a href="menu.html" class="inline-block mt-4">
+                    <button class="bg-white text-black px-8 py-2 rounded-full text-2xl font-medium cursor-pointer transition duration-300 ease-in-out transform hover:bg-black hover:text-white hover:scale-105">
+                        Menu
+                    </button>
+                </a>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavors Section -->
+    <section class="bg-white text-center py-5 mb-12">
+        <h2 class="text-3xl md:text-3xl font-bold">Nos Parfums</h2>
+        <p class="mt-4 p-4">Découvrez notre sélection unique de parfums délicieux, soigneusement élaborés pour satisfaire toutes vos envies. Que vous préfériez des saveurs fruitées, chocolatées ou crémeuses, nous avons quelque chose pour chaque palais.</p>
+        <a href="menu.html" class="inline-block">
+            <button class="cursor-pointer mt-4 bg-white text-black px-8 py-2 border-2 border-black rounded-lg hover:bg-black hover:text-white transition duration-300 ease-in-out transform hover:scale-105 shadow-md hover:shadow-xl hover:translate-y-1 text-2xl">
+                Menu
+            </button>
+        </a>        
+    </section>
+
+    <!-- Featured Image Section -->
+    <section>
+        <img src="../images/baac51_dce92e80d8174b64b0505698a8444b3d.webp" alt="Featured Ice Cream" class="mx-auto" style="height: 200px;">
+    </section>
+
+    <!-- Product Section -->
+    <section class="bg-green text-center py-8 bg-cover bg-center" style="background-image: url('../images/cold/Embossed\ GOLD\ Background.jpg');">
+        <h2 class="text-3xl md:text-3xl font-extrabold text-white">CAKE REMIX</h2>
+        <img src="../images/cold/crunch/Birthday Cake Remix.png" alt="Ice Cream Product" class="mx-auto mt-4 slide-in-image" style="height: 300px;">
+    </section>
+    
+
+    <!-- History Section -->
+    <section class="bg-white text-center py-16">
+        <h2 class="text-2xl md:text-3xl font-bold">L'Histoire du Glacier</h2>
+        <p class="mt-4 p-4">Depuis sa création, notre glacier s'efforce de capturer la pureté et la fraîcheur des ingrédients naturels dans chaque crème glacée. Fondé il y a plus de 2 ans, il est devenu un incontournable pour les amateurs de délices glacés, grâce à notre passion pour l'authenticité et l'innovation.</p>
+    </section>
+
+    <!-- Desserts Section -->
+    <!-- Desserts Section -->
+    <section class="bg-white text-center py-16">
+        <h2 class="text-2xl md:text-3xl font-bold">Nos Desserts</h2>
+        <div class="slider">
+            <div class="slider-track">
+                <div class="slider-item">
+                    <img src="../images/cookie/Banana Caramel Crunch.jpg" alt="Dessert 1" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Cake Batter Batter Batter.jpg" alt="Dessert 3" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Cheese cake Fantasy.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Chocolate Devotion.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Coffee Lovers Only.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Cookie Dough You Want Some.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Cookie Mintster.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Founders Favorite.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Germanchokoltekake.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Mint Mint  Choco. Choco. Chip.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/Mud Pie Mojo.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-item">
+                    <img src="../images/cookie/OREO-Overload.jpg" alt="Dessert 4" class="w-full h-full object-cover">
+                </div>
+                
+            </div>
+            <button class="slider-button prev-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="slider-button next-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Final Image Section -->
+    <section class="relative py-8 bg-green">
+      <img src="../images/baac51_ec98ba3fb62b4140be49e8c2fde05a73.png" alt="Final Image" class="relative mx-auto">
+  </section>
+  
+<!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+  
+            <!-- Logo and Social Media -->
+            <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+                <img src="../images/asset 0.png" alt="Cold Stone Creamery Logo" class="h-10 mb-4">
+                <div class="flex space-x-4">
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+                        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.347 3.608 1.322.975.975 1.26 2.243 1.322 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.347 2.633-1.322 3.608-.975.975-2.243 1.26-3.608 1.322-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.347-3.608-1.322-.975-.975-1.26-2.243-1.322-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.347-2.633 1.322-3.608.975-.975 2.243-1.26 3.608-1.322 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.275.057-2.709.33-3.835 1.456-1.127 1.127-1.399 2.561-1.456 3.835-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.275.33 2.709 1.456 3.835 1.127 1.127 2.561 1.399 3.835 1.456 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.275-.057 2.709-.33 3.835-1.456 1.127-1.127 1.399-2.561 1.456-3.835.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.275-.33-2.709-1.456-3.835-1.127-1.127-2.561-1.399-3.835-1.456-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.758-6.162 6.162s2.758 6.162 6.162 6.162 6.162-2.758 6.162-6.162-2.758-6.162-6.162-6.162zm0 10.162c-2.207 0-4-1.793-4-4s1.793-4 4-4 4 1.793 4 4-1.793 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.729 0-1.325.597-1.325 1.325v21.351c0 .729.596 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.654-4.785 1.324 0 2.462.098 2.794.142v3.24h-1.918c-1.504 0-1.795.716-1.795 1.764v2.311h3.588l-.468 3.622h-3.12v9.293h6.117c.729 0 1.325-.595 1.325-1.324v-21.351c0-.729-.596-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.72 0-4.924 2.204-4.924 4.924 0 .386.044.762.128 1.124-4.092-.205-7.719-2.165-10.141-5.144-.424.729-.666 1.577-.666 2.482 0 1.71.87 3.216 2.191 4.099-.807-.026-1.566-.248-2.228-.617v.062c0 2.388 1.697 4.384 3.946 4.836-.413.112-.849.171-1.297.171-.317 0-.626-.03-.928-.087.627 1.956 2.445 3.379 4.6 3.418-1.685 1.321-3.808 2.108-6.115 2.108-.398 0-.79-.023-1.175-.068 2.179 1.397 4.768 2.212 7.548 2.212 9.057 0 14.01-7.5 14.01-14.008 0-.213-.005-.425-.014-.637.961-.693 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+  
+            <!-- Contact Information -->
+            <div class="flex flex-col items-center md:items-end">
+                <p>123 Ice Cream St, Dessert City, Candyland</p>
+                <p>Email: info@coldstonecreamery.com</p>
+                <p>Téléphone: +123 456 789</p>
+            </div>
+        </div>
+  
+        <!-- Copyright -->
+        <div class="text-center mt-8">
+            <p>&copy; 2024 Cold Stone Creamery. Tous droits réservés.</p>
+        </div>
+    </div>
+  </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="hidden fixed bottom-10 right-10 bg-black text-white p-3 rounded-md shadow-md hover:bg-gray-700 transition duration-300 ease-in-out">
+    <!-- Up Arrow Icon -->
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+    </svg>
+</button>
+</body>
+</html>

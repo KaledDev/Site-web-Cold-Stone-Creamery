@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-green-dark {
+    background-color: #9ae3d2;
+  }
+}
+body {
+  font-family: 'Poppins';
+}
+.custom-glace-card {
+  padding: 1.5rem; /* Increase padding */
+}
+
+.custom-glace-card img {
+  height: 16rem; /* Increase height to better fit */
+  object-fit: cover; /* Ensure images fill their container without distortion */
+}
+/* styles.css */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px; /* Adjust based on your image size */
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slider-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.prev-btn {
+  left: 10px;
+}
+.next-btn {
+  right: 10px;
+}
+/* Define the keyframes for the slide-in animation */
+
+
+/* Initial state of the image */
+
+.slider {
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+.slider-track {
+  display: flex;
+  width: 100%; /* Assurez-vous que cela ne dépasse pas la largeur de l'écran */
+}
+
+/* Class to trigger the animation */
+.animate-slide-in {
+  animation: slideInFromRight 1s forwards;
+}
+
+#scrollToTopBtn { /* Masque le bouton par défaut */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000; /* Couleur de fond noire */
+    color: #fff; /* Couleur du texte blanche */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Assurez-vous que le bouton soit au-dessus des autres éléments */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333; /* Couleur de fond lors du survol */
+}
+
+#modal {
+  z-index: 1000; /* Ensure modal is above other content */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /* Hidden by default */
+}
+
+#modal:not(.hidden) {
+  visibility: visible;
+}
+
+#modal-img {
+  max-width: 100%;
+  max-height: 80vh; /* Limit the height to ensure it fits well on screen */
+}
+
+#close-modal {
+  background: black;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
